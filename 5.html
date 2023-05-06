@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Effects</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#button1").click(function() {
+				$("#box").hide(1000);
+			});
+			
+			$("#button2").click(function() {
+				$("#box").show(1000);
+			});
+			
+			$("#button3").click(function() {
+				$("#box").fadeOut(1000);
+			});
+			
+			$("#button4").click(function() {
+				$("#box").fadeIn(1000);
+			});
+			
+			$("#button5").click(function() {
+				$("#box").slideUp(1000);
+			});
+			
+			$("#button6").click(function() {
+				$("#box").slideDown(1000);
+			});
+			
+			$("#button7").click(function() {
+				$("#box").animate({
+					width: '50%',
+					height: '50%',
+					opacity: '0.5'
+				}, 1000);
+			});
+		});
+	</script>
+	<style>
+		#box {
+			background-color: #ddd;
+			width: 200px;
+			height: 200px;
+			margin: 50px auto;
+			text-align: center;
+			line-height: 200px;
+			font-size: 24px;
+			border: 1px solid #333;
+		}
+	</style>
+</head>
+<body>
+	<h1>jQuery Effects</h1>
+	
+	<button id="button1">Hide Box</button>
+	<button id="button2">Show Box</button>
+	<button id="button3">Fade Out Box</button>
+	<button id="button4">Fade In Box</button>
+	<button id="button5">Slide Up Box</button>
+	<button id="button6">Slide Down Box</button>
+	<button id="button7">Animate Box</button>
+	
+	<div id="box">Box</div>
+</body>
+</html>
